@@ -1,8 +1,8 @@
 # SWAPI
 ## The Star Wars API
 
-Source code for [swapi.co](https://swapi.co)
+Source code for [swapi.py4e.com](https://swapi.py4e.com)
 
-[![Circle CI](https://circleci.com/gh/phalt/swapi.svg?style=svg)](https://circleci.com/gh/phalt/swapi)
+High performance clone of [swapi.co](https://swapi.co)
 
 For contributing, please see CONTRIBUTING.md
