@@ -1,12 +1,9 @@
 import os
-import dj_database_url
+# import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-SECRET_KEY = os.environ.get(
-    'SECRET_KEY',
-    'i+acxn5(akgsn!sr4^qgf(^m&*@+g1@u^t@=8s@axc41ml*f=s'
-)
+SECRET_KEY = 'iacxn5akgsn'
 
 DEBUG = bool(os.environ.get('DEBUG', True))
 DEBUG = True
@@ -64,10 +61,11 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-if not DEBUG:
-    DATABASES['default'] =  dj_database_url.config()
+#Removed - Chuck
 
-    DATABASES['default']['ENGINE'] = 'django_postgrespool'
+# if not DEBUG:
+#     DATABASES['default'] =  dj_database_url.config()
+#     DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -85,12 +83,13 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
-        'TIMEOUT': 60
-    }
-}
+# Removed by Chuck
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django.core.cache.backends.memcached.PyLibMCCache',
+#         'TIMEOUT': 60
+#     }
+# }
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
@@ -159,11 +158,10 @@ CORS_ALLOW_METHODS = (
         'GET',
     )
 
-# Memcache
-
-from memcacheify import memcacheify
-
-CACHES = memcacheify()
+# Removed by Chuck
+# Memcache 
+#from memcacheify import memcacheify
+# CACHES = memcacheify()
 
 
 APPEND_SLASH = True
