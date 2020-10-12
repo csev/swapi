@@ -72,3 +72,9 @@ SWAPI would not be possible without contributions from the following people:
 - [Owen Hallett](https://github.com/Videocard)
 - [Carvilsi](https://github.com/carvilsi)
 - [Andrea Stagi](https://github.com/astagi)
+
+## The Current Server
+
+The code and data originally developed by Paul Hallett and others is now supported in production at scale
+by [Dr. Charles R. Severance](https://www.dr-chuck.com/) on the host https://swapi.py4e.com
+
