@@ -13,7 +13,7 @@ KEEN_DEBUG = True
 
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 CUSTOM_APPS = (
     'resources',
@@ -67,7 +67,22 @@ USE_TZ = True
 #     DATABASES['default'] =  dj_database_url.config()
 #     DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# Do not use this with CloudFlare - instead force it below 
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_PROXY_SSL_HEADER = ('CloudFlare_is_weird', None)
+
+# Somehow with Cloudflare and PythonAnywhere - this does not work
+# https://security.stackexchange.com/questions/8964/trying-to-make-a-django-based-site-use-https-only-not-sure-if-its-secure
+# os.environ['HTTPS'] = "on"
+# os.environ['wsgi.url_scheme'] = 'https'
+
+# So I hacked the _get_scheme code - look for CHUCK HACK
+# /home/dj4e/.virtualenvs/django1/lib/python2.7/site-packages/django/http/request.py
+# /home/dj4e/.virtualenvs/django1/lib/python2.7/site-packages/django/core/handlers/wsgi.py
+#
+# def _get_scheme(self): 
+#     return 'https'
+#
 
 ALLOWED_HOSTS = ['*']
 
