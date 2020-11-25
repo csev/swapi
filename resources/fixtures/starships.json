@@ -403,5 +403,15 @@
     },
     "model": "resources.starship",
     "pk": 75
+},
+{
+    "fields": {
+        "pilots": [86],
+        "MGLT": "110",
+        "starship_class": "Starfighter",
+        "hyperdrive_rating": "1.0"
+    },
+    "model": "resources.starship",
+    "pk": 77
 }
 ]
