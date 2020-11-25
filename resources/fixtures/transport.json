@@ -1348,5 +1348,23 @@
     },
     "model": "resources.transport",
     "pk": 76
+},
+{
+    "fields": {
+        "edited": "2020-11-25T21:23:49.886Z",
+        "consumables": "1 week",
+        "name": "X-wing",
+        "created": "2020-11-24T11:19:05.340Z",
+        "cargo_capacity": "110",
+        "passengers": "0",
+        "max_atmosphering_speed": "1100",
+        "crew": "1",
+        "length": "12.49",
+        "model": "T-70 X-wing",
+        "cost_in_credits": "200000",
+        "manufacturer": "Incom Corporation"
+    },
+    "model": "resources.transport",
+    "pk": 12
 }
 ]
