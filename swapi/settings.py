@@ -180,3 +180,8 @@ CORS_ALLOW_METHODS = (
 
 
 APPEND_SLASH = True
+
+# Needed for 3.2 and later
+# https://stackoverflow.com/questions/67783120/warning-auto-created-primary-key-used-when-not-defining-a-primary-key-type-by
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
