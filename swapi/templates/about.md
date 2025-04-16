@@ -51,10 +51,6 @@ I built the [Pokémon API](https://pokeapi.co) before I built this. I realised t
 
 Seeing the release trailer for Episode VII also made me stupidly enthusiastic for Star Wars again.
 
-## Who are you?
-
-I am [Paul Hallett](http://phalt.co), a senior software engineer and an infinitely protean machine.
-
 ## Copyright and stuff?
 
 Star Wars and all associated names are copyright Lucasfilm ltd.

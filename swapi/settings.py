@@ -67,7 +67,7 @@ USE_TZ = True
 #     DATABASES['default'] =  dj_database_url.config()
 #     DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
-# Do not use this with CloudFlare - instead force it below 
+# Do not use this with CloudFlare - instead force it below
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SECURE_PROXY_SSL_HEADER = ('CloudFlare_is_weird', None)
 
@@ -80,7 +80,7 @@ USE_TZ = True
 # /home/dj4e/.virtualenvs/django1/lib/python2.7/site-packages/django/http/request.py
 # /home/dj4e/.virtualenvs/django1/lib/python2.7/site-packages/django/core/handlers/wsgi.py
 #
-# def _get_scheme(self): 
+# def _get_scheme(self):
 #     return 'https'
 #
 
@@ -129,12 +129,13 @@ REST_FRAMEWORK = {
         'resources.renderers.WookieeRenderer'
     ),
     'PAGINATE_BY': 10,
-    'DEFAULT_THROTTLE_CLASSES': (
-        'rest_framework.throttling.AnonRateThrottle',
-    ),
-    'DEFAULT_THROTTLE_RATES': {
-        'anon': '10000/day',
-    },
+## Removed by Chuck 8-Dec-23
+##    'DEFAULT_THROTTLE_CLASSES': (
+##        'rest_framework.throttling.AnonRateThrottle',
+##    ),
+##    'DEFAULT_THROTTLE_RATES': {
+##        'anon': '10000/day',
+##    },
     'DEFAULT_FILTER_BACKENDS': (
         'rest_framework.filters.SearchFilter',
     )
@@ -174,7 +175,7 @@ CORS_ALLOW_METHODS = (
     )
 
 # Removed by Chuck
-# Memcache 
+# Memcache
 #from memcacheify import memcacheify
 # CACHES = memcacheify()
 
