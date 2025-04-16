@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 from django.conf.urls import patterns, url, include
 from django.contrib import admin
+from django.views import static
 admin.autodiscover()
 
 from rest_framework import routers
@@ -32,4 +33,5 @@ urlpatterns = patterns("",
     url(r"^api/vehicles/schema$", "resources.schemas.vehicles"),
     url(r"^api/starships/schema$", "resources.schemas.starships"),
     url(r"^api/", include(router.urls)),
+    url(r'^favicon\.ico$', static.serve, {'path': 'favicon.ico', 'document_root': 'swapi/static'}),
 )
